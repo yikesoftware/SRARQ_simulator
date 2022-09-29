@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SRARQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <button type="button" class="btn btn-primary" onclick="window.location.reload()">刷  新</button>
+            <button type="button" class="btn btn-warning" onclick="set_damage_signal()">损  坏</button>
+            <button type="button" class="btn btn-warning" onclick="set_loss_signal()">丢  包</button>
+            <button type="button" class="btn btn-warning" onclick="set_timeout_signal()">超  时</button>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <h3 class="text-center">Sender</h3>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="text-center">Channel</h3>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="text-center">Receiver</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered" id="action-list-table" style="table-layout:fixed;">
+                    <tbody>
+                        <!--tr>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                        </tr-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 包括所有已编译的插件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{url_for('static',filename='js/arq.js')}}"></script>
+</body>
+
+</html>
